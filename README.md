@@ -1,7 +1,10 @@
 # iume
- Iume es un simulador de partidos mediante dados que en estos momentos está en una fase alpha muy temprana. Actualmente puede hacer lo siguiente:
+ Iume es un simulador de partidos mediante dados que en estos momentos está en una fase alpha muy temprana y, además, el desarrollador es inexperto, por lo que pueden ocurrir bugs que hagan que no funcione como debería
+ 
+ Actualmente puede hacer lo siguiente:
  
  - Simular partidos en campo neutral por el sistema de @DAiros_14 utilizado en @ZaratoRuso, sin bonus por pifia
+ - Simular partidos con local y visitante en nivel Top según el sistema de @DAiros_14 utilizado en @ZaratoRuso, sin bonus por pifia
  
  Se pretende que pueda hacer, además, lo siguiente:
  
