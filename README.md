@@ -3,12 +3,11 @@
  
  Actualmente puede hacer lo siguiente:
  
- - Simular partidos en campo neutral por el sistema de @DAiros_14 utilizado en @ZaratoRuso, sin bonus por pifia
- - Simular partidos con local y visitante en nivel Top según el sistema de @DAiros_14 utilizado en @ZaratoRuso, sin bonus por pifia
+ - Simular partidos en campo neutral por el sistema de @DAiros_14 utilizado en @ZaratoRuso, con bonus por pifia
+ - Simular partidos con local y visitante según el sistema de @DAiros_14 utilizado en @ZaratoRuso, sin bonus por pifia
  
  Se pretende que pueda hacer, además, lo siguiente:
  
- - Simular partidos entre equipos con distinto nivel por el sistema de @DAiros_14 utilizado en @ZaratoRuso
  - Posibilidad de cambiar el nivel de los distintos equipos a conveniencia
  - Incluir otros sistemas como el que utiliza actualmente @Melkartia, u otros personalizados
  - Generar enfrentamientos tanto de todos contra todos (sistema de liga) como de eliminación directa (sistema de copa)
