@@ -9,13 +9,14 @@ public class Iume {
 		Random rd = new Random();
 		byte respuesta;
 		do {
-		System.out.println("Bienvenido a Iume, versión alpha 0.0.3\n\t"
+		System.out.println("Bienvenido a Iume, versión alpha 0.0.4\n\t"
 				+ "¿Qué quieres simular? (introduce el número)\n\t"
 				+ "0- Nada\n\t"
 				+ "1- Partido en campo neutral\n\t"
 				+ "2- Partido con local y visitante\n\t"
-				+ "3- Reportar algún bug\n\t"
-				+ "4- Insultar a Fafnir");
+				+ "3- Partido de Copa (sistema rosianio)\n\t"
+				+ "4- Reportar algún bug\n\t"
+				+ "5- Insultar a Fafnir");
 		respuesta = Byte.parseByte(sc.nextLine());
 		switch (respuesta) {
 		case 0:
@@ -84,13 +85,80 @@ public class Iume {
 				System.out.println("Esa no es una opción válida");
 				break;
 				}
-			} while (nvisitante > 4 || nlocal < 0);
+			} while (nvisitante > 4 || nvisitante < 0);
 			System.out.println("El resultado es " + rlocal + "-" + rvisitante);
 			break;
 		case 3:
-			System.out.println("Si has encontrado algún bug por favor avisa al creador por Twitter en @Fafnir98");
+			byte nprimero;
+			byte rprimero;
+			byte rsegundo;
+			do {
+				rprimero = 0;
+				System.out.println("¿En qué categoría está el primer equipo?\n\t"
+			
+					+ "1- Primera\n\t"
+					+ "2- Segunda\n\t"
+					+ "3- Tercera\n\t"
+					+ "4- Cuarta\n\t");
+			nprimero = Byte.parseByte(sc.nextLine());
+			 
+			switch (nprimero) {
+			case 1:
+				rprimero += Copa.primera();
+				break;
+			case 2:
+				rprimero += Copa.segunda();
+				break;
+			case 3:
+				rprimero += Copa.tercera();
+				break;
+			case 4:
+				rprimero += Copa.cuarta();
+				break;
+			default:
+				System.out.println("Esa no es una opción válida");
+				break;
+			}
+			} while (nprimero > 4 || nprimero < 0);
+			byte nsegundo;
+			do {
+				rsegundo = 0;
+				System.out.println("¿En qué categoría está el segundo equipo?\n\t"
+			
+					+ "1- Primera\n\t"
+					+ "2- Segunda\n\t"
+					+ "3- Tercera\n\t"
+					+ "4- Cuarta\n\t");
+			nsegundo = Byte.parseByte(sc.nextLine());
+			 
+			switch (nsegundo) {
+			case 1:
+				rsegundo += Copa.primera();
+				break;
+			case 2:
+				rsegundo += Copa.segunda();
+				break;
+			case 3:
+				rsegundo += Copa.tercera();
+				break;
+			case 4:
+				rsegundo += Copa.cuarta();
+				break;
+			default:
+				System.out.println("Esa no es una opción válida");
+				break;
+				}
+			} while (nsegundo > 4 || nsegundo < 0);
+			System.out.println("El resultado es " + rprimero + "-" + rsegundo);
 			break;
+
 		case 4:
+			System.out.println("Si has encontrado algún bug"
+					+ "por favor avisa al creador por Twitter en @Fafnir98."
+					+ "Envía una screen con lo que te haya pasado"
+					+ "y se intentará arreglar lo antes posible :3");
+			break;
+		case 5:
 			System.out.println("Tu puta madre por si acaso");
 			break;
 		default:
