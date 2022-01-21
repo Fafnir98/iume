@@ -9,7 +9,7 @@ public class Iume {
 		Random rd = new Random();
 		byte respuesta;
 		do {
-		System.out.println("Bienvenido a Iume, versión alpha 0.0.4\n\t"
+		System.out.println("Bienvenido a Iume, versión alpha 0.0.5\n\t"
 				+ "¿Qué quieres simular? (introduce el número)\n\t"
 				+ "0- Nada\n\t"
 				+ "1- Partido en campo neutral\n\t"
@@ -153,9 +153,9 @@ public class Iume {
 			break;
 
 		case 4:
-			System.out.println("Si has encontrado algún bug"
-					+ "por favor avisa al creador por Twitter en @Fafnir98."
-					+ "Envía una screen con lo que te haya pasado"
+			System.out.println("Si has encontrado algún bug "
+					+ "por favor avisa al creador por Twitter en @Fafnir98. "
+					+ "Envía una screen con lo que te haya pasado "
 					+ "y se intentará arreglar lo antes posible :3");
 			break;
 		case 5:
