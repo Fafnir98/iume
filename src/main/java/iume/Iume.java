@@ -1,6 +1,10 @@
 package iume;
 
 import java.util.Scanner;
+
+import clases.Equipo;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Iume {
@@ -9,14 +13,15 @@ public class Iume {
 		Random rd = new Random();
 		byte respuesta;
 		do {
-		System.out.println("Bienvenido a Iume, versión alpha 0.0.5\n\t"
+		System.out.println("Bienvenido a Iume, versión alpha 0.0.6\n\t"
 				+ "¿Qué quieres simular? (introduce el número)\n\t"
 				+ "0- Nada\n\t"
 				+ "1- Partido en campo neutral\n\t"
 				+ "2- Partido con local y visitante\n\t"
 				+ "3- Partido de Copa (sistema rosianio)\n\t"
-				+ "4- Reportar algún bug\n\t"
-				+ "5- Insultar a Fafnir");
+				+ "4- Copa entera (sistema rosianio)\n\t"
+				+ "5- Reportar algún bug\n\t"
+				+ "6- Insultar a Fafnir");
 		respuesta = Byte.parseByte(sc.nextLine());
 		switch (respuesta) {
 		case 0:
@@ -92,6 +97,8 @@ public class Iume {
 			byte nprimero;
 			byte rprimero;
 			byte rsegundo;
+			char respuestaCopa;
+			do {
 			do {
 				rprimero = 0;
 				System.out.println("¿En qué categoría está el primer equipo?\n\t"
@@ -150,15 +157,37 @@ public class Iume {
 				}
 			} while (nsegundo > 4 || nsegundo < 0);
 			System.out.println("El resultado es " + rprimero + "-" + rsegundo);
+			System.out.println("¿Quieres simular otro partido con este sistema? (S/N)");
+			respuestaCopa = sc.nextLine().toUpperCase().charAt(0);
+			} while (respuestaCopa == 'S');
+			break;
+			
+		case 4:
+			ArrayList<Equipo> participantes = new ArrayList<>();
+			char otro;
+			do {
+			System.out.println("¿Cuántos equipos van a participar?");
+			short nEquipos = Short.parseShort(sc.nextLine());
+			for (short i = 0; i < nEquipos; i++) {
+				System.out.println("Introduce el nombre del equipo " + (i+1));
+				String nombre = sc.nextLine();
+				System.out.println("¿En qué categoría está?");
+				byte categoria = Byte.parseByte(sc.nextLine());
+				participantes.add(new Equipo(nombre, categoria));
+			}
+			Copa.copaEntera(participantes);
+			System.out.println("¿Quieres simular otro torneo?");
+			otro = sc.nextLine().toUpperCase().charAt(0);
+			} while (otro == 'S');
 			break;
 
-		case 4:
+		case 5:
 			System.out.println("Si has encontrado algún bug "
 					+ "por favor avisa al creador por Twitter en @Fafnir98. "
 					+ "Envía una screen con lo que te haya pasado "
 					+ "y se intentará arreglar lo antes posible :3");
 			break;
-		case 5:
+		case 6:
 			System.out.println("Tu puta madre por si acaso");
 			break;
 		default:

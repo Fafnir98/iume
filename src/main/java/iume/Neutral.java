@@ -63,7 +63,7 @@ public class Neutral {
 			equipo2 += (byte) (5 + bonus);
 		}
 		System.out.println("El resultado es " + equipo1 + "-" + equipo2);
-		System.out.println("¿Quieres simular otro partido con este sistema?");
+		System.out.println("¿Quieres simular otro partido con este sistema? (S/N)");
 		char respuesta = sc.nextLine().toUpperCase().charAt(0);
 		if (respuesta == 'S') {
 			Neutral.resultado();
